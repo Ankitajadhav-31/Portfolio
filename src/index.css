@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-textPrimary;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-textSecondary hover:text-secondary transition-colors duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-textPrimary;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-secondary text-primary font-semibold rounded-md hover:bg-opacity-80 transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-tertiary p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300;
+  }
+}
+
+h1, .text-6xl, .main-heading {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h2, .section-title, .text-4xl, .subheading {
+  font-weight: 600;
+}
+
+p, .paragraph, .text-base, .text-lg, .text-xl {
+  font-weight: 400;
+  font-size: 1rem;
+} 
