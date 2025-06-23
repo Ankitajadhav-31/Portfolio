@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { FaGithub } from 'react-icons/fa'
+import logo from '../logo.svg'
 
 interface NavbarProps {
   darkMode: boolean
@@ -27,11 +28,12 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
         <div className="flex justify-between items-center h-16">
           <ScrollLink
             to="home"
-            className="text-2xl font-bold text-secondary cursor-pointer"
+            className="flex items-center gap-2 text-2xl font-bold text-secondary cursor-pointer"
             smooth={true}
             duration={500}
           >
-            Portfolio
+            <img src={logo} alt="logo" className="h-8 w-8" />
+            <span>Ankita's Portfolio</span>
           </ScrollLink>
 
           {/* Desktop Navigation */}

@@ -17,6 +17,14 @@ function App() {
   const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
     AOS.init({
       duration: 800,
       once: true,
@@ -25,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'dark' : ''} bg-primary text-textPrimary transition-colors duration-300`}>
+    <div className={`min-h-screen bg-primary text-textPrimary transition-colors duration-300`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div data-aos="fade-up">
@@ -35,9 +43,6 @@ function App() {
           <About />
         </div>
         <div data-aos="fade-up">
-          <Education />
-        </div>
-        <div data-aos="fade-up">
           <Skills />
         </div>
         <div data-aos="fade-up">
@@ -45,6 +50,9 @@ function App() {
         </div>
         <div data-aos="fade-up">
           <Projects />
+        </div>
+        <div data-aos="fade-up">
+          <Education />
         </div>
         <div data-aos="fade-up">
           <Resume />

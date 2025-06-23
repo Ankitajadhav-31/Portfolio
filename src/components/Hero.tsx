@@ -12,8 +12,8 @@ const roles = [
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-b from-primary to-tertiary">
-      <div className="container mx-auto px-4 py-12 flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+    <section id="home" className="min-h-screen flex items-center bg-primary">
+      <div className="container mx-auto px-4 py-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
           <div className="text-2xl md:text-3xl font-semibold text-secondary mb-4 min-h-[2.5rem]">
             <Typewriter
-              words={['Programmer', 'Data Scientist', 'UI/UX Designer']}
+              words={['Programmer']}
               loop={0}
               cursor
               cursorStyle="|"
@@ -65,30 +65,27 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex gap-4">
-            {/* @ts-ignore */}
-            <ScrollLink
-              to="about"
+            <a
+              href="https://drive.google.com/file/d/1UYGpt2ucNGkhU0kw9X8hiws2kEZA9P7b/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary cursor-pointer"
-              smooth={true}
-              duration={500}
             >
-              Learn More About Me
-            </ScrollLink>
+              Check Resume
+            </a>
           </div>
         </motion.div>
-        <div className="flex-1 flex justify-start md:justify-end mb-8 md:mb-0 md:-ml-12">
+        <div className="flex-1 flex justify-center items-center mb-8 md:mb-0">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, type: 'spring', stiffness: 80 }}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            className="w-60 md:w-72 h-60 md:h-72 rounded-full border-4 border-secondary shadow-lg bg-tertiary flex items-center justify-center overflow-hidden"
-            style={{ minWidth: '240px', minHeight: '240px', maxWidth: '300px', maxHeight: '300px' }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, type: 'spring' }}
+            className="w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-secondary shadow-lg flex items-center justify-center overflow-hidden"
           >
             <img
               src="/ankita.jpeg"
               alt="Ankita Jadhav profile"
-              className="object-cover w-full h-full rounded-full"
+              className="object-cover w-full h-full"
             />
           </motion.div>
         </div>
